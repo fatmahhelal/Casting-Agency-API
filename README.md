@@ -72,7 +72,7 @@ flask run
 ## Base URL: 
 
 * The APP will be run locally at ``http://127.0.0.:5000/``
-* Online URL:  `https://fsnd2020-casting-agency.herokuapp.com/`
+* Online URL:  `https://castingagencyapi2020.herokuapp.com/`
 * Authentication: This app has 3 users. Each has his own token which are provided in `setup.sh` file. Details about each user privilege are provided below.
 
 
