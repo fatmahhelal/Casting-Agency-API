@@ -11,6 +11,8 @@ from jose import jwt
 
 # defined a paginating actors function
 ACTORS_PER_PAGE = 20
+
+
 def pagination(request, selection):
     page = request.args.get('page', 1, type=int)
     start = (page - 1) * ACTORS_PER_PAGE
@@ -53,80 +55,77 @@ def create_app(test_config=None):
             'Total Actors': len(actors),
         })
 
-
 # endpoint to handle GET requests for all available actors
     @app.route('/actors')
     def get_actors():
         try:
             actors = Actors.query.all()
             formated_actor = pagination(request, actors)
-            
             # abort 404 if no actors available
             if len(actors) == 0:
                 abort(404)
-                
             # return success response
             return jsonify({
                 'success': True,
                 'Actors List': formated_actor,
                 'Total Actors': len(actors)
             })
-        #abort 422 if the request is un processable     
-        except:
+        # abort 422 if the request is un processable
+        except Exception as e:
             abort(422)
-            
+
 # endpoint to DELETE actor using a its ID.
     @app.route('/actors/<int:actoreId>', methods=['DELETE'])
     @requires_auth('delete:actor')
     def delete_actors(jwt, actoreId):
         # get the actor by its id to DELETE
         actore = Actors.query.filter(Actors.id == actoreId).one_or_none()
-        
+
         # abort 404 if the actor not found
         if actore is None:
             abort(404)
-            
+
         # delete the actor
         actore.delete()
-        
+
         # return success response
         return jsonify({
             'success': True,
-            'delete': actoreId, 
+            'delete': actoreId,
             'Total Actors': len(Actors.query.all())
 
           })
-          
+
 # endpoint to handle POST requests for Create a new actors
     @app.route('/actors/new', methods=['POST'])
     @requires_auth('post:actor')
     def add_actors(payload):
         body = request.get_json(force=True)
         try:
-           #get the new newActor's informatin
+            # get the new newActor's informatin
             newName = body.get('name')
             newAge = body.get('age')
             newGender = body.get('gender')
             newActor = Actors(name=newName, age=newAge, gender=newGender)
-            
-             #abort 400 if the requst is bad 
+
+            # abort 400 if the requst is bad
             if (newName == '' or newAge == '' or newGender == ''):
                 abort(400)
-                
-            #insert the actor 
+
+            # insert the actor
             newActor.insert()
             actor = [Actors.query.get(newActor.id).format()]
-            
+
             # return success response
             return jsonify({
-            'success': True,
-            'Actor': actor, 
-            'Total Actor': len(Actors.query.all())
+                'success': True,
+                'Actor': actor,
+                'Total Actor': len(Actors.query.all())
             })
-        #abort 422 if the request is un processable     
-        except:
+        # abort 422 if the request is un processable
+        except Exception as e:
             abort(422)
-            
+
 # endpoint to PATCH actors using a its ID
     @app.route('/actors/<int:actore_id>', methods=['PATCH'])
     @requires_auth('patch:actor')
@@ -152,80 +151,80 @@ def create_app(test_config=None):
                 'success': True,
                 'actor': [actors.format()],
                 'total_actor': len(Actors.query.all())
-            })        
-        #abort 422 if the request is un processable     
-        except:
-                abort(422)
-            
+            })
+        # abort 422 if the request is un processable
+        except Exception as e:
+            abort(422)
+
 # endpoint to handle GET requests for all available Movies
     @app.route('/movies')
     def get_movies():
         try:
-          movies = Movies.query.all()
-          formated_movie = pagination(request, movies)
-        
-        # abort 404 if no movies available
-          if len(movies) == 0:
-              abort(404)
-            
-        # return success response
-          return jsonify({
-            'success': True,
-            'Movies List': formated_movie,
-            'Total Movies': len(movies)
-          })
-        #abort 422 if the request is un processable     
-        except:
+            movies = Movies.query.all()
+            formated_movie = pagination(request, movies)
+
+            # abort 404 if no movies available
+            if len(movies) == 0:
+                abort(404)
+
+            # return success response
+            return jsonify({
+                'success': True,
+                'Movies List': formated_movie,
+                'Total Movies': len(movies)
+            })
+        # abort 422 if the request is un processable
+        except Exception as e:
             abort(422)
 
-# endpoint to DELETE movie using a its ID.    
+# endpoint to DELETE movie using a its ID.
     @app.route('/movies/<int:movieId>', methods=['DELETE'])
     @requires_auth('delete:movie')
     def delete_movies(jwt, movieId):
         # get the movie by its id to DELETE
         movie = Movies.query.filter(Movies.id == movieId).one_or_none()
-        
+
         # abort 404 if the movie not found
         if movie is None:
             abort(404)
-        
+
         # delete the movie
         movie.delete()
-        
+
         # return success response
         return jsonify({
           'success': True,
           'delete': movieId,
           'Total Movies': len(Movies.query.all())
         })
-    
+
 # endpoint to handle POST requests for Create a new actors
     @app.route('/movies/new', methods=['POST'])
     @requires_auth('post:movie')
     def add_movies(jwt):
-           #get the new newMoview's informatin
+        # get the new newMoview's informatin
         body = request.get_json(force=True)
         try:
             newTitle = body.get('title')
             newRelease_date = body.get('relase_date')
             movies = Movies(title=newTitle, relase_date=newRelease_date)
-            
-             #abort 400 if the requst is bad 
+
+            # abort 400 if the requst is bad
             if newTitle == '' or newRelease_date == '':
                 abort(404)
 
-            #insert the movie 
+            # insert the movie
             movies.insert()
             movie = [Movies.query.get(movies.id).format()]
-            
+
             # return success response
             return jsonify({
                 'success': True,
-                'movie': movie, 
+                'movie': movie,
                 'Total Movies': len(Movies.query.all())
                 })
-        #abort 422 if the request is un processable     
-        except:
+        # bort 422 if the request is un processable
+        except Exception as e:
             abort(422)
 
 # endpoint to PATCH movies using a its ID.
@@ -235,13 +234,13 @@ def create_app(test_config=None):
         movie = Movies.query.filter(Movies.id == movieId).one_or_none()
         # returns a 404 error if movie is not found
         if movie is None:
-         abort(404)
-         
+            abort(404)
+
         # get the enterd data from client
         body = request.get_json(force=True)
         newTitle = body.get('title')
         newRelase_date = body.get('relase_date')
-         
+
         # returns a 400 error if  title None
         if newTitle == '' or newRelase_date == '':
             abort(404)
@@ -251,17 +250,17 @@ def create_app(test_config=None):
             movie.title = newTitle
             movie.relase_data = newRelase_date
             movie.update()
-            
+
             # return success response
             return jsonify({
-            'success': True,
-            'movie': [movie.format()],
-            'total_movie': len(Movies.query.all())
+                'success': True,
+                'movie': [movie.format()],
+                'total_movie': len(Movies.query.all())
             })
-        #abort 422 if the request is un processable     
+        # abort 422 if the request is un processable
         except Exception:
             abort(422)
-            
+
 # Error Handling for all expected errors 400, 403, and AuthError.
     @app.errorhandler(404)
     def not_found(error):
@@ -317,8 +316,12 @@ def create_app(test_config=None):
         response = jsonify(ex.error)
         response.status_code = ex.status_code
         return response
-        
+
     return app
+
+
 app = create_app()
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
