@@ -1,0 +1,874 @@
+{
+	"id": "9482b3d3-4072-4794-bbe6-de3c5c2211e6",
+	"name": "Casting Agency",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+		"3fb83687-94c9-444b-82d8-78a44014d6b5",
+		"028b6932-6b74-4954-b045-dbb1ec10d055"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"name": "Assistant",
+			"description": null,
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJrQzlLLW1aMFJ6NXVTRlJKaV9HTiJ9.eyJpc3MiOiJodHRwczovL2Rldi15eHVzdzNyYi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWZmNGFjNjdlYTNmYzcwMDc4NzdhZjg2IiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYxMDc4MTY3NCwiZXhwIjoxNjEwODY4MDc0LCJhenAiOiJzNFg5N1V6b3RtYW9YZ1dxSFRYQ21YdHVQNXBIUFg4NiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.FSQWKBl1TBgdHFpS4EYjDxOMgJY-Adf1YwbYBmYogJP8usbJikTaM9vMmpzty7YmdKzsa21xVFphLs-QuD2__oSFXm3qFquM0NMcpqY6R_D0ggt6HaXIMimrPdVbVBZhaewrY63UbVD0z_aR7UB0w_EeC0mjGLKNh8eoMLuW2SSg7wB4CWlUZz_fxeAcymjNmxR7ffLcI_0HdtMJ3VIJb_XV2kOFSywS40nSxPZ2LeH1gBjyVRZUtsS6nWkGlCGFJ34pBAQqJkb8fBYcpcSyFzZg9wg5i78mKdhtI91HQ3V7j6xNTiL3UaLfU2nBDotfpejCXX-wvicvNbs_fZu6-g"
+					},
+					{
+						"key": "password",
+						"value": "{{baris}}",
+						"type": "string"
+					}
+				]
+			},
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6ef7bd99-792e-464e-82bb-fba67ce09c1b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a45df7a5-4dff-41d4-8d56-4dfe037ed0f9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"collection": "9482b3d3-4072-4794-bbe6-de3c5c2211e6",
+			"folder": null,
+			"order": [
+				"6b19746c-267e-4fdf-9a70-ba16d775581e",
+				"bb4824e9-6463-49b4-a93f-c93b0dcc249f",
+				"4b898fe2-f089-4482-8e6c-b198e120b625",
+				"28b8e66d-bc5f-4382-8fbd-a358d72db08f",
+				"d86a848b-53dd-420e-b39d-934b504f343c",
+				"e871c584-2a5e-4039-a4c5-62093d6645bf",
+				"46416a5a-d774-4558-b7c8-d4f647551e25",
+				"7fb5cb2f-6e26-4a98-9f45-648a7b1313ab"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"name": "Director",
+			"description": null,
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJrQzlLLW1aMFJ6NXVTRlJKaV9HTiJ9.eyJpc3MiOiJodHRwczovL2Rldi15eHVzdzNyYi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWZmNGFlYTcwODI4NGIwMDZiYjViOTFiIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYxMDc4NzMwNSwiZXhwIjoxNjEwODczNzA1LCJhenAiOiJzNFg5N1V6b3RtYW9YZ1dxSFRYQ21YdHVQNXBIUFg4NiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9yIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvciIsInBhdGNoOm1vdmllIiwicG9zdDphY3RvciJdfQ.qv81Uzos-Ob7KHmjBBConKu9S5c3AG7lRlJ-X5vtPZ-7rdQ54SofhUd804Lpnge2TSmrqZNLqCOE7eogT5vTZC5IxIH5CNJGoMIzlhDuf2RuZNWsJEfOuW9KMpPGVSTu2iNEpLETNnjYZftpkn0AuQluYiLbVorTyuR9aUFdTMlUduEyRcdvvTKC7CY_qxigZh1kSvtSKZCDX0nz03I2adYhjBtSzVynyPAjW6yMXY_9t4KJ4r0swNhKcDp8b5JQgWM0qyhgbPXnDNFxfbHgsRYLuIUhavHELkDqRDfw6HoHc9EWmvAV7Dw8rVjdGgKHM4-j29L9k8d4K1KsCJ6Hsw"
+					},
+					{
+						"key": "password",
+						"value": "{{baris}}",
+						"type": "string"
+					}
+				]
+			},
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0183e895-ded1-4db5-aa3c-3fb8797a762a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16036577-dab4-441b-9278-116b93e95e96",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"collection": "9482b3d3-4072-4794-bbe6-de3c5c2211e6",
+			"folder": null,
+			"order": [
+				"326f9e75-f5d3-4576-b05b-0c39e3a368d4",
+				"96a7357e-c3b5-4970-bb4f-fd71b39c5bb0",
+				"5306cb38-17e6-4b4e-9d9d-68b56a65a2ba",
+				"8355a65a-2b9b-4688-b89b-4086d4fd9650",
+				"3b91e304-4021-4420-9e43-6193ed095616",
+				"86526014-07bb-4c50-aa53-dcd8d6f79622",
+				"72dbaa74-86bb-4d8b-9e7a-19552ca724d4",
+				"c8969b3e-4ee8-475f-bb53-9739ddf2e1ea"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"name": "Producer",
+			"description": null,
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJrQzlLLW1aMFJ6NXVTRlJKaV9HTiJ9.eyJpc3MiOiJodHRwczovL2Rldi15eHVzdzNyYi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWZmNGIwMWRlYTNmYzcwMDc4NzdiMDMyIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYxMDc0ODgxNiwiZXhwIjoxNjEwODM1MjE2LCJhenAiOiJzNFg5N1V6b3RtYW9YZ1dxSFRYQ21YdHVQNXBIUFg4NiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9yIiwiZGVsZXRlOm1vdmllIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvciIsInBhdGNoOm1vdmllIiwicG9zdDphY3RvciIsInBvc3Q6bW92aWUiXX0.ZNkj2Ukpvv6bBpWzZxpNXZA0F3PzBAmBEweOlhRH8mzQF1R1CVfXhfQHbLmVO9RmrJS7IiI6kEoYcE6FfUs-NQDC4p47fHEeT78hz-7CreWxYt9ePxQ9eSmbnbNux6DbwsUmwh5vKF1rPGtsp2OWRphiFwjLMppAHRWp0eqUEqkCIkHWhwliQP0pdtLgONBJ6K2l9Wfa7Ia6Bk_MYDb0fu36FY3P-SwTXspYc3Z0kOeYvcThyQSwjK4ZNn8tVTToevS-xgbDq5qr5hbchdegCE9Gr9AvLveCxlwH62qgYXEyHMqSuJTCNAJRDTv_h0aGajx_Sc-TcI2Kpe0vbtHDSg"
+					},
+					{
+						"key": "password",
+						"value": "{{baris}}",
+						"type": "string"
+					}
+				]
+			},
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c6245d20-d791-4334-9065-845bc7543cf1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "5f925083-fa34-42c8-b7c0-620dce6b6b96",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"collection": "9482b3d3-4072-4794-bbe6-de3c5c2211e6",
+			"folder": null,
+			"order": [
+				"95647752-633a-47e3-ba0e-967c2d0e82ce",
+				"846d1964-d6f5-4985-9091-d2eb4f961a82",
+				"17e5d43d-9cfa-49a9-a4bc-f8f21a61c04a",
+				"a462e790-026e-46d5-aefd-fd69d37f1d37",
+				"a55a7fe7-9bf0-4059-a6b8-1d9b79853210",
+				"0d07c358-1d16-4b78-b3c6-b6b91a82dcf7",
+				"24d1eaad-1336-4c27-8f23-d85a222a2306",
+				"8903989c-be8f-4e27-bff0-ed57a69d5da0"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "0d07c358-1d16-4b78-b3c6-b6b91a82dcf7",
+			"name": "Delete Movies",
+			"url": "http://127.0.0.1:5000/movies/12",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Producer}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "17e5d43d-9cfa-49a9-a4bc-f8f21a61c04a",
+			"name": "Create Actores",
+			"url": "http://127.0.0.1:5000/actors/new",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJrQzlLLW1aMFJ6NXVTRlJKaV9HTiJ9.eyJpc3MiOiJodHRwczovL2Rldi15eHVzdzNyYi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWZmNGIwMWRlYTNmYzcwMDc4NzdiMDMyIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYxMDMxNTk4OCwiZXhwIjoxNjEwNDAyMzg4LCJhenAiOiJzNFg5N1V6b3RtYW9YZ1dxSFRYQ21YdHVQNXBIUFg4NiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9yIiwiZGVsZXRlOm1vdmllIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvciIsInBhdGNoOm1vdmllIiwicG9zdDphY3RvciIsInBvc3Q6bW92aWUiXX0.piAFZ0d0KYay1Vk7cS0YWliZuc6_DF93NEkb17-4lRqTJpyIUk7_sH1vQnkiWXGG3NnZCo1aaE5B4DkYhZhku6LQ3_lRbbXVX95ijHo3AVE3R9JNqjNdNONeNfJsh3eEsDss9xZbfSWlrX6nxRx1IVZA1YcgEbXmqP8bni2Eb7wlf1k6KHzADVlxTUKQk9AZi5rTKNBNUrVBU3NBK6di1ZKStGhGz9bElzOnbMnKBjUbKmXICPMg_yXBlKFAcc6dnJq0w6wXN_rePoLT9vXeKbGfkaus8doby1Jx35bRENtK_9RuFjuNFFzU_M6mCGuhNRUvUfrJj24NtS-nEwCnbQ"
+					}
+				]
+			},
+			"events": null,
+			"folder": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"rawModeData": "{\r\n    \"name\": \"HELAL\",\r\n    \"age\": \"29\",\r\n    \"gender\": \"M\" \r\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "24d1eaad-1336-4c27-8f23-d85a222a2306",
+			"name": "Create Movies",
+			"url": "http://127.0.0.1:5000/movies/new",
+			"description": null,
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Producer}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"rawModeData": "{\r\n    \"relase_date\": \" 2021-01-16 00:00:00\",\r\n    \"title\": \"First Love\"\r\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "28b8e66d-bc5f-4382-8fbd-a358d72db08f",
+			"name": "Delete Actores",
+			"url": "http://127.0.0.1:5000/actors/8",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"type": "text"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Assistant}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "326f9e75-f5d3-4576-b05b-0c39e3a368d4",
+			"name": "Get Actores",
+			"url": "http://127.0.0.1:5000/actors",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Director}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "3b91e304-4021-4420-9e43-6193ed095616",
+			"name": "Get Movies",
+			"url": "http://127.0.0.1:5000/movies",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Director}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "46416a5a-d774-4558-b7c8-d4f647551e25",
+			"name": "Update Movies",
+			"url": "http://127.0.0.1:5000/movies/2",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Assistant}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"rawModeData": "{\r\n    \"title\": \"here\"\r\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "4b898fe2-f089-4482-8e6c-b198e120b625",
+			"name": "Update Actore",
+			"url": "http://127.0.0.1:5000/actors/5",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Assistant}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"rawModeData": "{\r\n    \"name\": \"Loolo\",\r\n    \"gender\": \"M\",\r\n    \"age\": \"20\"\r\n}\r\n  ",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "5306cb38-17e6-4b4e-9d9d-68b56a65a2ba",
+			"name": "Create Actores",
+			"url": "http://127.0.0.1:5000/actors/new",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Director}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"rawModeData": "{\r\n    \"name\": \"kmkmkmk\",\r\n    \"age\": \"28\",\r\n    \"gender\": \"M\" \r\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "6b19746c-267e-4fdf-9a70-ba16d775581e",
+			"name": "Get Actores",
+			"url": "http://127.0.0.1:5000/actors",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Assistant}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "72dbaa74-86bb-4d8b-9e7a-19552ca724d4",
+			"name": "Delete Movies",
+			"url": "http://127.0.0.1:5000/movies/9",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Director}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "7fb5cb2f-6e26-4a98-9f45-648a7b1313ab",
+			"name": "Delete Movies",
+			"url": "http://127.0.0.1:5000/movies/1",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Assistant}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "8355a65a-2b9b-4688-b89b-4086d4fd9650",
+			"name": "Delete Actores",
+			"url": "http://127.0.0.1:5000/actors/6",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"type": "text"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Director}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "846d1964-d6f5-4985-9091-d2eb4f961a82",
+			"name": "Delete Actores",
+			"url": "https://127.0.0.1:5000/actors/7",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"type": "text"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Producer}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "86526014-07bb-4c50-aa53-dcd8d6f79622",
+			"name": "Create Movies",
+			"url": "http://127.0.0.1:5000/movies/new",
+			"description": null,
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Director}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"rawModeData": "{\r\n    \"relase_date\": \"Mon, 01 Oct 2021 12:12:12 GMT\",\r\n    \"title\": \"herr\"\r\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "8903989c-be8f-4e27-bff0-ed57a69d5da0",
+			"name": "Update Movies",
+			"url": "http://127.0.0.1:5000/movies/6",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Producer}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"rawModeData": "{\r\n    \"relase_date\": \"2020-08-12 00:00:00\",\r\n    \"title\": \"2020 die\"\r\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "95647752-633a-47e3-ba0e-967c2d0e82ce",
+			"name": "Get Actores",
+			"url": "http://127.0.0.1:5000/actors",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Producer}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "96a7357e-c3b5-4970-bb4f-fd71b39c5bb0",
+			"name": "Update Actore",
+			"url": "http://127.0.0.1:5000/actors/2",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Director}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"rawModeData": "{\r\n    \"name\": \"foofot\",\r\n    \"gender\": \"m\",\r\n    \"age\": \"22\"\r\n}\r\n  ",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a462e790-026e-46d5-aefd-fd69d37f1d37",
+			"name": "Update Actore",
+			"url": "http://127.0.0.1:5000/actors/10",
+			"description": null,
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Producer}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"rawModeData": "{\r\n    \"age\": \"12\",\r\n    \"gender\": \"M\",\r\n    \"name\": \"Quen of KSA\"\r\n}\r\n  ",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a55a7fe7-9bf0-4059-a6b8-1d9b79853210",
+			"name": "Get Movies",
+			"url": "http://127.0.0.1:5000/movies",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Producer}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "028b6932-6b74-4954-b045-dbb1ec10d055",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "bb4824e9-6463-49b4-a93f-c93b0dcc249f",
+			"name": "Create Actores",
+			"url": "http://127.0.0.1:5000/actors/new",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Assistant}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"rawModeData": "{\r\n    \"name\": \"FOFO\",\r\n    \"age\": \"19\",\r\n    \"gender\": \"female\" \r\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "c8969b3e-4ee8-475f-bb53-9739ddf2e1ea",
+			"name": "Update Movies",
+			"url": "http://127.0.0.1:5000/movies/6",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Director}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "3fb83687-94c9-444b-82d8-78a44014d6b5",
+			"rawModeData": "{\r\n    \"title\": \"hero no akadmy\"\r\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d86a848b-53dd-420e-b39d-934b504f343c",
+			"name": "Get Movies",
+			"url": "http://127.0.0.1:5000/movies",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Assistant}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "e871c584-2a5e-4039-a4c5-62093d6645bf",
+			"name": "Create Movies",
+			"url": "http://127.0.0.1:5000/movies/new",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Assistant}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "a94c6f34-3d28-41f4-8a6f-5af3cb54fdc1",
+			"rawModeData": "{\r\n    \"relase_date\": \"Mon, 01 Oct 2012 12:12:12 GMT\",\r\n    \"title\": \"hero\"\r\n}",
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
